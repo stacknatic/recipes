@@ -11,13 +11,9 @@ const Preview = (props) => {
             <li className='lnameview'>Last name: {props.lname}</li>
             <li className='phoneview'>Phone: {props.phone}</li>
             <li className='roleview'>Role: {props.role}</li>
-            <li className='messageview'>Message: {props.message}</li>
+            <li className='messageview'>Message: <span className='messagepreview'>{props.message}</span></li>
         </ul>
-            {/* <p className="fnameview">First name: {() => props.fnameHandler}</p>
-            <p className='lnameview'>Last name: {() => props.lnameHandler}</p>
-            <p className='phoneview'>Phone: {() => props.phoneHandler}</p>
-            <p className='roleview'>Role: {() => props.roleHandler}</p>
-            <p className='messageview'>Message: {() => props.messageHandler}</p> */}
+           
         
         </div>
     )

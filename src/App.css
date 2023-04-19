@@ -5,10 +5,13 @@
 }
 .App{
   display: flex;
+  justify-content: center;
+
   /* justify-content: space-between; */
 }
 body{
   font-family:"Raleway", sans-serif;
+ 
 
 }
 h2{
@@ -22,9 +25,12 @@ p{
 form{
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  /* margin: 1rem; */
   line-height: 1.5rem;
   width: 16rem;
+  border: 1px solid #555;
+  padding: 0.3rem;
+
 }
 form select{
   margin-bottom: 1rem;
@@ -68,10 +74,10 @@ form input, select{
   font-family: courier, monospace;
 }
 .preview li{
-  margin: 1rem 0;
+  margin: 1rem;
   list-style: none;
   border-bottom: 1px dotted #ccc;
-  text-indent: 25px;
+  text-indent: 5px;
   height: auto;
   padding: 10px;
   text-transform: capitalize;
@@ -92,3 +98,12 @@ form input, select{
   float: left;
   height: 495px;
   margin-left: 40px;}
+
+.messagepreview{
+  display: flex;
+  text-indent: 0;
+  padding: 5px;
+  word-break: break-all;
+  margin: 0;
+  
+}

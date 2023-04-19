@@ -24,31 +24,22 @@ class App extends Component{
       showModal: !this.state.showModal
     })
   }
-
-  fnameHandler = (e) => {
-
-    this.setState({
-      fname: e.target.value,
-      // lname: lname.target.value
-      // phone: e.target.value
-    })
-  }
-  lnameHandler = (e) => {
+  
+  inputHandler = (e) => {
 
     this.setState({
-      lname: e.target.value,
-      // lname: lname.target.value
-      // phone: e.target.value
-    })
-  }
-  // inputHandler = (e) => {
+      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
 
-  //   this.setState({
-  //     phone: e.target.value,
-  //     // lname: lname.target.value
-  //     phone: e.target.value
-  //   })
-  // }
+
+
+
+    });
+  }
   render(){
 
     return (
@@ -56,19 +47,20 @@ class App extends Component{
       <div className="App">
 
         <Input 
-        fnameHandler = {this.fnameHandler}
-        lnameHandler = {this.lnameHandler}
         submit = {this.modalHandler}
-        // inputHandler = {this.inputHandler}
+        inputHandler = {this.inputHandler}
         
         />
         <Preview 
         fname={this.state.fname}
         lname={this.state.lname}
-        // phone={this.state.phone}
+        phone={this.state.phone}
+        role={this.state.role}
+        message={this.state.message}
+
         
         />
-        {this.state.showModal && <Modal />}
+        {this.state.showModal && <Modal click={this.modalHandler} />}
         {/* <Modal /> */}
         
       </div>

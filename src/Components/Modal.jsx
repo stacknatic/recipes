@@ -5,7 +5,7 @@ const Modal = (props) => {
     return(
       <div class="modal-container">
       <div class="modal-box">
-        <span class="modal-close-button">x</span>
+        <span class="modal-close-button" onClick={props.click}>x</span>
         <h2 id="modal-heading">This is your note:</h2>
         <p class="feedback"></p>
         <div>
