@@ -1,68 +1,106 @@
-import React from 'react';
-import { Component } from 'react';
-import Preview from './Components/Preview';
+import React from "react";
+import { Component } from "react";
+import Preview from "./Components/Preview";
+import axios from "axios";
 
+import "./App.css";
+import "./Modal.css";
+import Input from "./Components/Input";
+import Modal from "./Components/Modal";
+import Notes from "./Components/Notes";
 
-import './App.css';
-import './Modal.css'
-import Input from './Components/Input';
-import Modal from './Components/Modal';
-
-
-class App extends Component{
-  state ={
+class App extends Component {
+  state = {
     showModal: false,
-    fname: '',
-    lname: '',
-    phone: '',
-    role: '',
-    message: ''
-  }
-  modalHandler = (e) => {
-    e.preventDefault()
-    this.setState({
-      showModal: !this.state.showModal
-    })
+    note: {
+      fname: "",
+      lname: "",
+      phone: "",
+      role: "",
+      message: ""
+    },
+    data: []
+  };
+  
+
+  componentDidMount(){
+    axios.get("http://localhost:3015/posts/")
+    .then(response => this.setState({data: response.data }))
+    
   }
   
-  inputHandler = (e) => {
 
+  modalHandler = (e) => {
+    e.preventDefault();
     this.setState({
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value
-
-
-
-
+      showModal: !this.state.showModal,
     });
+  };
+
+  inputHandler = (e) => {
+    this.setState({
+      note:{
+        ...this.state.note,
+        [e.target.name]: e.target.value,
+      }
+    });
+  };
+
+  submitHandler = () => {
+      axios.post("http://localhost:3015/posts/", this.state.note )
+      .then(response => console.log('response',  response))
+      .catch(error => console.log('error', error))
+      this.setState({
+        showModal: false,
+        note: {
+          fname: '',
+          lname: '',
+          phone: '',
+          role: '',
+          message: ''
+        },
+      })
+      // axios.get('http://localhost:4001/posts/').then(response => this.setState({ data: response.data }))
+
   }
-  render(){
+ 
 
+  
+  render() {
+    console.log('new data: ' + this.state.data)
+
+    const Results = () => {
+      const notes = this.state.data.map((note) => {
+        return (
+          <div key={note.id}>
+            <Notes
+              id={note.id}
+              fname={note.fname}
+              lname={note.lname}
+              phone={note.phone}
+              role={note.role}
+              message={note.message}
+            />
+          </div>
+        );
+      });
+      return notes;
+    };
+  
     return (
-      
       <div className="App">
-
-        <Input 
-        submit = {this.modalHandler}
-        inputHandler = {this.inputHandler}
-        
+        <Input submit={this.modalHandler} inputHandler={this.inputHandler} />
+        <Preview
+          {...this.state.note}
         />
-        <Preview 
-        fname={this.state.fname}
-        lname={this.state.lname}
-        phone={this.state.phone}
-        role={this.state.role}
-        message={this.state.message}
-
-        
-        />
-        {this.state.showModal && <Modal click={this.modalHandler} />}
-        {/* <Modal /> */}
-        
+        {this.state.showModal && (
+          <Modal
+          click={this.modalHandler}
+          {...this.state.note} 
+          submitHandler = {this.submitHandler}
+          />
+          )}
+        <Results />
       </div>
     );
   }

@@ -4,7 +4,7 @@ const Preview = (props) => {
     return(
         <div className="preview">
         <h2>Preview</h2>
-        <div class="lines"></div>
+        <div className="lines"></div>
 
         <ul>
         <li className="fnameview">First name: {props.fname}</li>

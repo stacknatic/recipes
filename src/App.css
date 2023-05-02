@@ -3,14 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .App{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-
+  margin: 2rem;
+  
   /* justify-content: space-between; */
 }
 body{
   font-family:"Raleway", sans-serif;
+  background-color: skyblue;
  
 
 }
@@ -22,14 +26,21 @@ p{
   font-weight: bold;
 }
 
+form, .preview{
+  margin: 0.3rem;
+}
+
 form{
+  flex-basis: 35%;
   display: flex;
   flex-direction: column;
-  /* margin: 1rem; */
+  padding: 1rem;
   line-height: 1.5rem;
   width: 16rem;
   border: 1px solid #555;
-  padding: 0.3rem;
+  color: #fff;
+  background-color: #1f1f1f;
+  border-radius: 5px;
 
 }
 form select{
@@ -48,30 +59,28 @@ form input, select{
   font-family: inherit;
 }
 .submit-button{
-  height: 2rem;
+  height: 3rem;
   background-color: green;
   color: #fff;
-  border-radius: 5px;
-}
+  border-radius: 25px;
+  min-width: 10rem;
+  font-weight: bold;
+  margin: auto;
 
-.modal-button{
-  background-color: green;
-  padding: 0.4rem;
-  margin-right: 1rem;
-  border-radius: 5px;
 }
 
 .preview{
+  flex-basis: 60%;
   width: 24rem;
   height: auto;
-  padding: 0.3rem;
+  padding: 1rem;
 
   color: #1f1f1f;
   font-size: 16px;
-  /* padding: 0 !important; */
   font-family: courier, monospace;
   border: 1px solid #dedede;
   font-family: courier, monospace;
+  background-color: #f5f5f5;
 }
 .preview li{
   margin: 1rem;
@@ -80,7 +89,6 @@ form input, select{
   text-indent: 5px;
   height: auto;
   padding: 10px;
-  text-transform: capitalize;
 }
 
 .preview li:hover {
@@ -106,4 +114,25 @@ form input, select{
   word-break: break-all;
   margin: 0;
   
+}
+
+.notes{
+  flex-basis: 50%;
+  margin: 2rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #1f1f1f;
+  color: white;
+  min-width: 200px;
+  
+
+}
+
+.notes h2{
+  text-align: unset;
+}
+
+.notes ul{
+  padding: 1rem;
 }
