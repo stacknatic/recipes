@@ -7,10 +7,12 @@ import "./App.css";
 import "./Modal.css";
 import Input from "./Components/Input";
 import Modal from "./Components/Modal";
-import Notes from "./Components/Notes";
+import Recipes from "./Components/Recipes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import RecipeCards from "./Components/RecipeCards";
+import HomePage from "./Components/HomePage";
 
 class App extends Component {
   state = {
@@ -70,11 +72,11 @@ class App extends Component {
   render() {
     console.log('new data: ' + this.state.data)
 
-    const Results = () => {
-      const notes = this.state.data.map((note) => {
+    const RecipeList = () => {
+      const recipes = this.state.data.map((note) => {
         return (
           <div key={note.id}>
-            <Notes
+            <Recipes
               id={note.id}
               fname={note.fname}
               lname={note.lname}
@@ -85,7 +87,7 @@ class App extends Component {
           </div>
         );
       });
-      return notes;
+      return recipes;
     };
   
     return (
@@ -94,8 +96,8 @@ class App extends Component {
         <Header />
         <Routes>
 
-        <Route path="/preview" element={<Preview />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="" element={<HomePage />} />
+        <Route path="/recipes" element={<RecipeList />} />
         <Route path="/add-recipe" element={<Input />} />
         
           </Routes>

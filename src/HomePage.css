@@ -1,0 +1,28 @@
+.hero{
+    position: relative;
+    background-color: black;
+    width: 95vw;
+    height: 250px;
+}
+
+.homepage-cards-container{
+    display: flex;
+    gap: 2rem;
+}
+
+.homepage-card{
+    border: 1px solid gray;
+    padding: 0 1rem 1rem;
+
+}
+
+.browse-recipes{
+    position: absolute;
+    left: 4rem;
+    bottom: 4rem;
+    border: 1px solid gray;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
