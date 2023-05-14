@@ -8,6 +8,9 @@ import "./Modal.css";
 import Input from "./Components/Input";
 import Modal from "./Components/Modal";
 import Notes from "./Components/Notes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 class App extends Component {
   state = {
@@ -60,11 +63,9 @@ class App extends Component {
           message: ''
         },
       })
-      // axios.get('http://localhost:4001/posts/').then(response => this.setState({ data: response.data }))
+      // axios.get('http://localhost:3015/posts/').then(response => this.setState({ data: response.data }))
 
   }
- 
-
   
   render() {
     console.log('new data: ' + this.state.data)
@@ -89,18 +90,17 @@ class App extends Component {
   
     return (
       <div className="App">
-        <Input submit={this.modalHandler} inputHandler={this.inputHandler} />
-        <Preview
-          {...this.state.note}
-        />
-        {this.state.showModal && (
-          <Modal
-          click={this.modalHandler}
-          {...this.state.note} 
-          submitHandler = {this.submitHandler}
-          />
-          )}
-        <Results />
+        <BrowserRouter>
+        <Header />
+        <Routes>
+
+        <Route path="/preview" element={<Preview />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/add-recipe" element={<Input />} />
+        
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </div>
     );
   }

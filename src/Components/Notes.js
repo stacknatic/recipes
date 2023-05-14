@@ -2,9 +2,17 @@ import React from 'react';
 
 const Notes = (props) => {
     return(
-        <div className='notes'>
-            <h2>Note {props.id}</h2>
+        <div className='recipes'>
+            <h2>Recipe {props.id}</h2>
             <ul>
+            {/* <li>{props.name}</li>
+            <li>{props.author}</li>
+            <li>{props.country}</li>
+            <li>{props.description}</li>
+            <li>{props.image}</li>
+            <li>{props.quantiy}</li>
+            <li>{props.ingredient}</li>
+            <li>{instructions}</li> */}
 
             <li>{props.fname}</li>
             <li>{props.lname}</li>

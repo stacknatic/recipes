@@ -9,84 +9,28 @@
       "message": "some message"
     },
     {
-      "id": 2,
-      "fname": "Jim",
+      "fname": "John",
+      "lname": "Smith",
+      "phone": "982388238",
+      "role": "Student",
+      "message": "Welcome to class",
+      "id": 2
+    },
+    {
+      "fname": "name",
+      "lname": "axios",
+      "phone": "3949493",
+      "role": "Student",
+      "message": "morning",
+      "id": 3
+    },
+    {
+      "fname": "Donald",
       "lname": "Jones",
-      "phone": "1234567",
-      "role": "teacher",
-      "message": "some message"
-    },
-    {
-      "id": 3,
-      "fname": "Jim",
-      "lname": "Jones",
-      "phone": "1234567",
-      "role": "teacher",
-      "message": "some message"
-    },
-    {
-      "fname": "Tosin",
-      "lname": "Maxwell",
-      "phone": "9283232",
-      "role": "",
-      "message": "On Vacation",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "fname": "Dayo",
-      "lname": "Tijani",
-      "phone": "8343843",
-      "role": "",
-      "message": "Wonderful"
-    },
-    {
-      "id": 8,
-      "fname": "Pert ",
-      "lname": "Odil",
-      "phone": "3343",
+      "phone": "838422",
       "role": "Student",
-      "message": "adfad"
-    },
-    {
-      "id": 9,
-      "fname": "Yemi",
-      "lname": "Tawa",
-      "phone": "23823",
-      "role": "Student",
-      "message": "yes"
-    },
-    {
-      "fname": "Bola",
-      "lname": "Tia",
-      "phone": "3323",
-      "role": "Other",
-      "message": "Well",
-      "id": 10
-    },
-    {
-      "fname": "Tumi",
-      "lname": "Ninu",
-      "phone": "388343",
-      "role": "Student",
-      "message": "Oluko",
-      "id": 11
-    },
-    {
-      "fname": "Evander ",
-      "lname": "Holyfield",
-      "phone": "01923344",
-      "role": "Student",
-      "message": "Living la vida loca in the South of Spain.",
-      "id": 12
-    },
-    {
-      "fname": "Dami",
-      "lname": "Krane",
-      "phone": "292932",
-      "role": "Other",
-      "message": "La campaigne",
-      "id": 13
+      "message": "Hello",
+      "id": 4
     }
   ]
 }
