@@ -5,6 +5,7 @@ const HomePage = () => {
     return(
         <main>
             <div className="hero">
+                
                 <h1>Tasty</h1>
 
                 <p className='browse-recipes'>Browse recipes</p>

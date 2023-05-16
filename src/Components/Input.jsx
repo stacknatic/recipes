@@ -4,7 +4,7 @@ import {countriesList} from '../countriesList';
 
 
 const countries = countriesList;
-const ingredients = () => {
+const Ingredients = () => {
     return (
         <>
         <div className='ingredients-input-container'>
@@ -25,16 +25,28 @@ const ingredients = () => {
     
 }
 
-let ingredientsArray = [ingredients()]
+let ingredientsArray = [<Ingredients />]
+
+const ingredientsMap = () => {
+    const thelist = ingredientsArray.map(item => {
+        return <Ingredients key={item.id}/>
+    })
+    return thelist
+}
 
 const Input = (props) => {
    
     const [loaded, setLoaded] = useState(false);
-    const [ingredient, setIngredient] = useState(ingredientsArray)
+    const [ingredient, setIngredient] = useState(ingredientsMap())
+
+    
+
     const ingredientHandler = (e) => {
         e.preventDefault();
+        
+
         setIngredient(
-            ingredientsArray = [...ingredientsArray, ingredients()]
+            ingredientsArray = [...ingredientsArray, <Ingredients />]
             )
     }
  
@@ -76,21 +88,11 @@ const Input = (props) => {
                <label htmlFor="image">Image</label>
                <input type="text" id="image"/>
 
-                <label htmlFor="ingredents">Ingredients</label>
-               {/* <div className='ingredients-input-container'>
-                <div>
-               <label htmlFor="quantity">Quantity</label>
-                <input type="text" id="quantity"/>
-                    
-                </div>
-
-                <div>
-
-                <label htmlFor="ingredient">Ingredient</label>
-                <input type="text"id="ingredient" />
-               </div>
-                </div> */}
-                {ingredient}
+                <label htmlFor="ingredients">Ingredients</label>
+              
+                {/* {ingredient} */}
+                {
+                ingredientsArray.map((item, index) => <Ingredients key={index}/>)}
                 <button onClick={ingredientHandler}>add more</button>
            
 
