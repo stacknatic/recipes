@@ -26,37 +26,63 @@ h2, h3{
 }
 
 
-form, .preview{
+form fieldset, .preview{
   margin: 0.3rem;
 }
 
-form{
+form fieldset{
   flex-basis: 35%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   line-height: 1.5rem;
-  width: 16rem;
+  width: 25rem;
   border: 1px solid #555;
-  color: #fff;
-  background-color: maroon;
+  color: #000;
+  background-color: #fff;
   border-radius: 5px;
 
 }
-form select{
+form fieldset .ingredients-input-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+form fieldset .ingredients-input-container input{
+  display: block;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+form fieldset select{
   margin-bottom: 1rem;
 }
-form label{
+form fieldset label{
   margin-top: 1rem;
 }
+fieldset button{
+  width: 80px;
+  margin: 1rem 0;
+  padding: 0.4rem;
+  color: green;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: #fff;
+}
 
-form textarea{
+form fieldset textarea{
   margin-bottom: 1rem;
 }
-form input, select{
+form fieldset input, select{
   height: 2rem;
   padding: 0.3rem;
   font-family: inherit;
+  border-radius: 5px;
+}
+
+legend{
+  color: #000;
 }
 .submit-button{
   height: 3rem;
@@ -142,7 +168,7 @@ form input, select{
 }
 
 footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 1rem;
   background-color: maroon;

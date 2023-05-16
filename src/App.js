@@ -28,11 +28,11 @@ class App extends Component {
   };
   
 
-  componentDidMount(){
-    axios.get("http://localhost:3015/posts/")
-    .then(response => this.setState({data: response.data }))
+  // componentDidMount(){
+  //   axios.get("http://localhost:3015/posts/")
+  //   .then(response => this.setState({data: response.data }))
     
-  }
+  // }
   
 
   modalHandler = (e) => {
@@ -65,12 +65,11 @@ class App extends Component {
           message: ''
         },
       })
-      // axios.get('http://localhost:3015/posts/').then(response => this.setState({ data: response.data }))
+    
 
   }
   
   render() {
-    console.log('new data: ' + this.state.data)
 
     const RecipeList = () => {
       const recipes = this.state.data.map((note) => {
