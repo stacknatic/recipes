@@ -2,35 +2,84 @@
   "posts": [
     {
       "id": 1,
-      "fname": "Jim",
-      "lname": "Jones",
-      "phone": "1234567",
-      "role": "teacher",
-      "message": "some message"
+      "name": "Honey roasted venison",
+      "author": "Jones",
+      "country": "Uganda",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "description": "some message"
     },
     {
-      "fname": "John",
-      "lname": "Smith",
-      "phone": "982388238",
-      "role": "Student",
-      "message": "Welcome to class",
+      "name": "",
+      "author": "",
+      "country": "",
+      "description": "",
+      "image": "",
+      "ingredients": [],
+      "instructions": "",
+      "quantity": "afaf",
+      "ingredient": "afafaf",
       "id": 2
     },
     {
-      "fname": "name",
-      "lname": "axios",
-      "phone": "3949493",
-      "role": "Student",
-      "message": "morning",
+      "name": "",
+      "author": "",
+      "country": "",
+      "description": "",
+      "image": "",
+      "ingredients": {
+        "ingredient": "afafa"
+      },
+      "instructions": "",
       "id": 3
     },
     {
-      "fname": "Donald",
-      "lname": "Jones",
-      "phone": "838422",
-      "role": "Student",
-      "message": "Hello",
+      "name": "azu",
+      "author": "bali",
+      "country": "Andorra",
+      "description": "great",
+      "image": "https://plus.unsplash.com/premium_photo-1669655027787-58392ba2bceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8eXVtbXl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+      "ingredients": [
+        {
+          "quantity": "3",
+          "ingredient": "oranges"
+        }
+      ],
+      "instructions": "cook well",
       "id": 4
+    },
+    {
+      "name": "azu",
+      "author": "bali",
+      "country": "Andorra",
+      "description": "great",
+      "image": "https://plus.unsplash.com/premium_photo-1669655027787-58392ba2bceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8eXVtbXl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+      "ingredients": [
+        {
+          "quantity": "3",
+          "ingredient": "oranges"
+        }
+      ],
+      "instructions": "cook well",
+      "id": 5
+    },
+    {
+      "name": "Munchy cupcakes",
+      "author": "Bando",
+      "country": "Armenia",
+      "description": "Great option",
+      "image": "https://images.unsplash.com/photo-1474625342403-1b8a2c0f7215?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eXVtbXl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+      "ingredients": [
+        {
+          "quantity": "5",
+          "ingredient": "cubes"
+        },
+        {
+          "quantity": "10",
+          "ingredient": "teaspoons"
+        }
+      ],
+      "instructions": "You will love it.",
+      "id": 6
     }
   ]
 }

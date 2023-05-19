@@ -3,25 +3,44 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
 
 .App{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 7rem 2rem;
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  justify-content: center; */
+  /* margin: 7rem 2rem; */
   
   /* justify-content: space-between; */
 }
+main{
+  /* width: 100%; */
+  /* display: flex;
+  justify-content: center; */
+  /* flex-wrap: wrap; */
+  margin: 0 2rem;
+  /* justify-content: space-between; */
+}
 body{
+  width: 100vw;
   font-family:"Raleway", sans-serif;
   background-color: #f5f5f5;
-  margin: 5rem;
+  margin: 5rem 0;
 }
 
-h2, h3{
+h2{
   text-align: center;
   padding: 0.5rem;
   margin: 1.5rem;
+}
+h3{
+  margin: 1rem 0;
 }
 
 
@@ -40,7 +59,12 @@ form fieldset{
   color: #000;
   background-color: #fff;
   border-radius: 5px;
+  margin: auto;
 
+}
+.search-form legend, .search-form input{
+  text-align: center;
+  margin: auto;
 }
 form fieldset .ingredients-input-container{
   display: flex;
@@ -54,6 +78,7 @@ form fieldset .ingredients-input-container input{
   justify-content: center;
   align-items: center;
 }
+
 form fieldset select{
   margin-bottom: 1rem;
 }
@@ -72,6 +97,7 @@ fieldset button{
 
 form fieldset textarea{
   margin-bottom: 1rem;
+  padding: 0.3rem;
 }
 form fieldset input, select{
   height: 2rem;
@@ -141,22 +167,7 @@ legend{
   
 }
 
-.recipes{
-  flex-basis: 50%;
-  margin: 2rem;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 0.5rem;
-  background-color: #f5f5f5;
-  color: #000;
-  min-width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
 
-}
 
 .notes h2{
   text-align: unset;
@@ -168,12 +179,20 @@ legend{
 
 footer{
   position: fixed;
+  left: 0;
   bottom: 0;
   padding: 1rem;
   background-color:  #c14705 ;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   color: #fff;
   font-size: small;
 
 }
+
+progress{
+  margin: auto;
+  display: block;
+
+}
+
