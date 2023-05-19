@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
     return(
-        <>
-                <h1>Tasty</h1>
-        <main>
+        <div className='homepage-container'>
             {/* <div className="hero"> */}
             <div class="video-wrapper">
                 <video autoPlay muted loop id="myVideo">
@@ -43,8 +41,7 @@ const HomePage = () => {
                 </div>
 
             </div>
-        </main>
-        </>
+        </div>
     )
 }
 

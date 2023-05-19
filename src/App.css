@@ -66,6 +66,7 @@ form fieldset{
   text-align: center;
   margin: auto;
 }
+
 form fieldset .ingredients-input-container{
   display: flex;
   justify-content: space-between;
@@ -194,5 +195,11 @@ progress{
   margin: auto;
   display: block;
 
+}
+
+@media only screen and (max-width: 475px){
+ form fieldset{
+    width: fit-content;
+  }
 }
 
