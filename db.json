@@ -80,6 +80,50 @@
       ],
       "instructions": "You will love it.",
       "id": 6
+    },
+    {
+      "name": "Brazo",
+      "author": "ejo",
+      "country": "Brazil",
+      "description": "checko",
+      "image": "",
+      "flag": "us",
+      "ingredients": [],
+      "instructions": "",
+      "id": 7
+    },
+    {
+      "name": "naija",
+      "author": "beni",
+      "country": "Guinea-Bissau",
+      "description": "",
+      "image": "",
+      "flag": "ng",
+      "ingredients": [],
+      "instructions": "",
+      "id": 8
+    },
+    {
+      "name": "jin",
+      "author": "",
+      "country": "Algeria",
+      "description": "",
+      "image": "",
+      "flag": "dz",
+      "ingredients": [],
+      "instructions": "",
+      "id": 9
+    },
+    {
+      "name": "britico",
+      "author": "",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "description": "",
+      "image": "",
+      "flag": "gb",
+      "ingredients": [],
+      "instructions": "",
+      "id": 10
     }
   ]
 }

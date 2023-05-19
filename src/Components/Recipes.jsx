@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from './Search';
 import { Link } from 'react-router-dom';
+// import { countriesList } from '../countriesList';
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState(
@@ -45,10 +46,12 @@ const [searchInput, setSearchInput] = useState('');
   
   
 
-  const Card = ({name, image}) => {
+  const Card = ({name, image, flag}) => {
     return(
 
       <div className='recipes'>
+       <img className='country-flag' src={`https://flagcdn.com/48x36/${flag}.png`}/>
+
        <img className='recipe-photo' src={image} />
        <h2>{name}</h2>                      
        <a className="see-more" href="#"> view full recipe</a>
@@ -77,6 +80,7 @@ const [searchInput, setSearchInput] = useState('');
                id = {recipe.id}
                name = {recipe.name}
                image = {recipe.image}
+               flag = {recipe.flag}
                
                
                />
