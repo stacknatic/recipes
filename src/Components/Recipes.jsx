@@ -37,7 +37,7 @@ const Recipes = () => {
     return <progress></progress>;
   }
 
-  const Card = ({ name, country, image, flag }) => {
+  const Card = ({ id, name, country, image, flag }) => {
     return (
       <div className="recipes">
         {/* <img className='country-flag' src={`https://flagcdn.com/48x36/${flag}.png`}/> */}
@@ -61,10 +61,8 @@ const Recipes = () => {
 
         <img className="recipe-photo" src={image} />
         <h2>{name}</h2>
-        <a className="see-more" href="#">
-          {" "}
-          view full recipe
-        </a>
+        
+        <Link to={id.toString()} className="see-more">view recipe</Link>
       </div>
     );
   };

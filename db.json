@@ -130,6 +130,82 @@
       "ingredients": [],
       "instructions": "",
       "id": 10
+    },
+    {
+      "name": "Pounded yam with egusi soup",
+      "author": "Opeyemi Ajanaku",
+      "country": "Nigeria",
+      "description": "Pounded yam and egusi soup is a delicacy in Nigeria, especially in Ondo State.",
+      "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "flag": "ng",
+      "ingredients": [
+        {
+          "quantity": "1 ",
+          "ingredient": "yam"
+        },
+        {
+          "quantity": "1",
+          "ingredient": "onion"
+        },
+        {
+          "quantity": "2",
+          "ingredient": "knorr cubes"
+        },
+        {
+          "quantity": "3",
+          "ingredient": "rodo"
+        },
+        {
+          "quantity": "5",
+          "ingredient": "tatase"
+        }
+      ],
+      "instructions": "To make Pounded Yam, all you need is Puna yam and water.\n\nPeel the yam and cut it into small cubes.\nRinse about once or twice till you get clear water.\nBoil until the Yam becomes fork-tender.\nPound or blend into a dough-like consistency until it’s completely smooth with no yam chunks left.\n",
+      "id": 11
+    },
+    {
+      "name": "jon",
+      "author": "",
+      "country": "Angola",
+      "description": "",
+      "image": "",
+      "flag": "ao",
+      "ingredients": [],
+      "instructions": "",
+      "id": 12
+    },
+    {
+      "name": "jonny",
+      "author": "",
+      "country": "Angola",
+      "description": "",
+      "image": "",
+      "flag": "ao",
+      "ingredients": [],
+      "instructions": "",
+      "id": 13
+    },
+    {
+      "name": "jonny Krane",
+      "author": "Jonny",
+      "country": "Angola",
+      "description": "Yoummy",
+      "image": "",
+      "flag": "ao",
+      "ingredients": [],
+      "instructions": "",
+      "id": 14
+    },
+    {
+      "name": "jonny Krane",
+      "author": "Jonny Bravo",
+      "country": "Angola",
+      "description": "Yoummy",
+      "image": "",
+      "flag": "ao",
+      "ingredients": [],
+      "instructions": "",
+      "id": 15
     }
   ]
 }

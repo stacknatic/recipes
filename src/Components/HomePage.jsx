@@ -36,8 +36,9 @@ const HomePage = () => {
                     </NavLink>
                 </div>
                 <div className='homepage-card'>
-                    <h3>Want to know more about our project?</h3>
-                    <a href="https://en.bc.fi/" target="_blank">Visit our programme page. </a>
+                    <h3>About TasteIT</h3>
+                    <p>TasteIt was created as a React basics project. under a Full Stack development programme.</p>
+                    <a href="https://en.bc.fi/" target="_blank" className='navlink'>Visit programme page</a>
                 </div>
 
             </div>

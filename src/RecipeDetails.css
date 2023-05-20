@@ -1,0 +1,52 @@
+.recipe-details-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.recipe-details-container h1{
+    text-align: center;
+    margin: 1rem;
+}
+.recipe-details-container h2{
+    text-align: left;
+}
+figcaption{
+    text-align: center;
+}
+
+.recipe-card{
+    position: relative;
+    flex-basis: 40%;
+    margin-top: 1rem;
+}
+
+.recipe-details{
+    /* margin-top: 1rem; */
+    flex-basis: 50%;
+    line-height: 1.5rem;;
+}
+
+.recipe-details-photo{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.ingredients-list{
+    margin: 1rem;
+}
+
+.back-button{
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #c14705;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 25px;
+}
+

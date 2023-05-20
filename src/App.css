@@ -36,8 +36,8 @@ body{
 
 h2{
   text-align: center;
-  padding: 0.5rem;
-  margin: 1.5rem;
+  /* padding: 0.5rem 0; */
+  margin: 1rem 0;
 }
 h3{
   margin: 1rem 0;
@@ -99,6 +99,7 @@ fieldset button{
 form fieldset textarea{
   margin-bottom: 1rem;
   padding: 0.3rem;
+  font-family: inherit;
 }
 form fieldset input, select{
   height: 2rem;

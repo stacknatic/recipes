@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
-import { Component } from "react";
-import Preview from "./Components/Preview";
-import axios from "axios";
+import React from "react";
 
 import "./App.css";
 import "./Modal.css";
-import Input from "./Components/Input";
-import Modal from "./Components/Modal";
 import Recipes from "./Components/Recipes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomePage from "./Components/HomePage";
+import RecipeDetails from "./Components/RecipeDetails";
+import RecipeForm from "./Components/RecipeForm";
 
 const App = () => {
 
@@ -23,7 +20,8 @@ const App = () => {
 
         <Route path="" element={<HomePage />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/add-recipe" element={<Input />} />
+        <Route path="/add-recipe" element={<RecipeForm />} />
+        <Route path="/recipes/:recipedetails" element={<RecipeDetails />} />
         
           </Routes>
           <Footer />

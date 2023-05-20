@@ -1,25 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { countriesList } from "../countriesList";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const countries = countriesList;
-
-// const Ingredients = (props) => {
-//     return (
-//         <div className='ingredients-input-container'>
-//             <div>
-//            <label htmlFor="quantity">Quantity</label>
-//             <input name="quantity" type="text" onChange={props.handler}/>
-//             </div>
-
-//             <div>
-//             <label htmlFor="ingredient">Ingredient</label>
-//             <input name="ingredient" type="text" onChange={props.handler}/>
-//            </div>
-//             </div>
-//     )
-
-// }
 
 const Ingredients = ({ addQuantity, addIngredient, index }) => {
   return (
@@ -45,14 +29,11 @@ const Ingredients = ({ addQuantity, addIngredient, index }) => {
   );
 };
 
-// let ingredientsArray = [<Ingredients />];
-
-const Input = (props) => {
+const RecipeForm = (props) => {
   const [loaded, setLoaded] = useState(false);
   const [ingredients, setIngredients] = useState([
     { quantity: "", ingredient: "" },
   ]);
-  // let [ingredients, setIngredients] = useState([]);
   const [recipeInfo, setRecipeInfo] = useState({
     name: "",
     author: "",
@@ -74,10 +55,7 @@ const Input = (props) => {
     if (e.target.name === "country") {
       for (const [key, value] of Object.entries(countries)) {
         if (e.target.value === value) {
-          flag = key;
-
-          console.log(flag.toLowerCase());
-          
+          flag = key;          
           setRecipeInfo(recipeInfo.flag = flag.toLowerCase());
         }
     }
@@ -87,23 +65,18 @@ const Input = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("submit clicked");
-
-    console.log(recipeInfo);
 
     axios
       .post("http://localhost:3015/posts/", recipeInfo)
-      .then((response) => console.log("response", response))
-      .catch((error) => console.log("error", error));
+      .then((response) => Swal.fire({
+        // position: 'top-end',
+        icon: 'success',
+        title: 'Recipe added successfully',
+        showConfirmButton: false,
+        timer: 2000
+      }))
+      .catch((error) => Swal.fire("Can't proceed"));
   };
-
-  // const ingredientHandler = (e) => {
-  //     e.preventDefault();
-
-  //     setIngredient(
-  //         ingredientsArray = [...ingredientsArray, <Ingredients />]
-  //         )
-  // }
 
   useEffect(() => {
     setLoaded(true);
@@ -149,14 +122,6 @@ const Input = (props) => {
               <Option key={country} origin={country} />
             ))}
 
-            {/* {Object.keys(countries).map((country, value) => <Option key={country} origin={value}/>)} */}
-            {/* {() => {
-                    for(const[ key, value] of countries) {
-                        checker = <Option key={key} origin ={value} />
-                    }
-                }} */}
-
-            {/* {countries.map(country => <Option key={country} origin={country}/>)} */}
           </select>
           <label htmlFor="descriptiom">Description</label>
           <textarea
@@ -172,10 +137,6 @@ const Input = (props) => {
 
           <label htmlFor="ingredients">Ingredients</label>
 
-          {/* {
-                ingredientsArray.map((item, index) => {
-                    return item=<Ingredients key={index} handler={(e) => addIngredient(e, index)}/>
-                } )} */}
           {ingredients.map((ingredient, i) => (
             <Ingredients
               key={i}
@@ -201,4 +162,4 @@ const Input = (props) => {
   }
 };
 
-export default Input;
+export default RecipeForm;
