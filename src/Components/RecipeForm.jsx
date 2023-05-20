@@ -69,7 +69,6 @@ const RecipeForm = (props) => {
     axios
       .post("http://localhost:3015/posts/", recipeInfo)
       .then((response) => Swal.fire({
-        // position: 'top-end',
         icon: 'success',
         title: 'Recipe added successfully',
         showConfirmButton: false,
