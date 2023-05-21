@@ -14,7 +14,7 @@ const RecipeDetails = () => {
     setIsLoading(true);
 
     axios
-      .get(`http://localhost:3015/posts/${params.recipedetails}`)
+      .get(`https://stacknatic.com/recipes/${params.recipedetails}`)
       .then((response) => {
         setIngredientEntries(response.data.ingredients);
         setRecipe(response.data);

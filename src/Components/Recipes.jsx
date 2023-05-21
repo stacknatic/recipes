@@ -14,7 +14,7 @@ const Recipes = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get("http://localhost.com:3015/posts/").then((response) => {
+    axios.get("https://stacknatic.com/recipes/").then((response) => {
       setData(response.data);
       setIsLoading(false);
     });

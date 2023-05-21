@@ -71,7 +71,7 @@ const RecipeForm = (props) => {
     
 
     axios
-      .post("http://localhost.com:3015/posts/", recipeInfo, {"Content-Type": "application/json"})
+      .post("https://stacknatic.com/recipes/", recipeInfo, {"Content-Type": "application/json"})
       .then(() =>
         Swal.fire({
           icon: "success",
