@@ -2,7 +2,7 @@
 
 Final task for react basics course.
 
-The app is a single page recipe web app that allows users to add and browse recipes from all around the would.
+The app is a single page recipe web app that allows users to add and browse recipes from all around the world.
 
 ## Tech Stack
 
