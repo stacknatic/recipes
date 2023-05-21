@@ -26,7 +26,7 @@ const Recipes = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get("http://localhost:3015/posts/").then((response) => {
+    axios.get("http://localhost:8000/recipes/").then((response) => {
       setData(response.data);
       setRecipes(response.data);
       setIsLoading(false);
@@ -59,7 +59,7 @@ const Recipes = () => {
 </picture>
         
 
-        <img className="recipe-photo" src={image} />
+        <img className="recipe-photo" src={image} alt={name}/>
         <h2>{name}</h2>
         
         <Link to={id.toString()} className="see-more">view recipe</Link>

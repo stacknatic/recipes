@@ -45,9 +45,10 @@
   }
 
   .country-flag{
-    height: 40px;
+    /* width: 27px; */
+    /* height: 40px; */
     position: absolute;
     left: -0.65rem;
     top: -0.5rem;
-    border-radius: 50%;
+    border-radius: 5px;
   }

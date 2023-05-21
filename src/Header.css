@@ -13,7 +13,11 @@ header{
 
 }
 nav ul .navlink{
-    display: inline-block;
+    /* display: inline-block; */
     color: #fff;
+}
+nav ul li{
     margin: 0 1rem;
+    list-style-type: none;
+    display: inline-block
 }

@@ -67,7 +67,7 @@ const RecipeForm = (props) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3015/posts/", recipeInfo)
+      .post("http://localhost:8000/recipes/", recipeInfo)
       .then((response) => Swal.fire({
         icon: 'success',
         title: 'Recipe added successfully',
@@ -122,7 +122,7 @@ const RecipeForm = (props) => {
             ))}
 
           </select>
-          <label htmlFor="descriptiom">Description</label>
+          <label htmlFor="description">Description</label>
           <textarea
             name="description"
             id="description"

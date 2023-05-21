@@ -9,15 +9,21 @@ const Header = () => {
             <h1>TasteIT</h1>
             <nav>
                 <ul>
+                    <li>
                     <NavLink className="navlink" to="/">
                     Home
-                    </NavLink>
+                    </NavLink>   
+                    </li>
+                    <li>
                     <NavLink className="navlink" to="/recipes">
                     Recipes
                     </NavLink>
+                    </li>
+                    <li>
                     <NavLink className="navlink" to="/add-recipe">
                     Add new recipe
                     </NavLink>
+                    </li>
                    
                 </ul>
             </nav>
