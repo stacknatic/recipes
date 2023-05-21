@@ -43,10 +43,10 @@ figcaption{
     display: block;
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #c14705;
+    background-color: #1f1f1f;
     color: #fff;
     font-weight: bold;
     font-size: 1.1rem;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 

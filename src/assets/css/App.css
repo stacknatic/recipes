@@ -11,21 +11,8 @@ a{
 }
 
 
-.App{
-  /* display: flex; */
-  /* flex-wrap: wrap;
-  justify-content: center; */
-  /* margin: 7rem 2rem; */
-  
-  /* justify-content: space-between; */
-}
 main{
-  /* width: 100%; */
-  /* display: flex;
-  justify-content: center; */
-  /* flex-wrap: wrap; */
   margin: 0 2rem;
-  /* justify-content: space-between; */
 }
 body{
   width: 100vw;
@@ -36,7 +23,6 @@ body{
 
 h2{
   text-align: center;
-  /* padding: 0.5rem 0; */
   margin: 1rem 0;
 }
 h3{
@@ -169,8 +155,6 @@ legend{
   
 }
 
-
-
 .notes h2{
   text-align: unset;
 }
@@ -184,12 +168,11 @@ footer{
   left: 0;
   bottom: 0;
   padding: 1rem;
-  background-color:  #c14705 ;
+  background-color:  #1f1f1f ;
   width: 100vw;
   text-align: center;
   color: #fff;
-  font-size: small;
-
+  font-size: medium;
 }
 
 progress{

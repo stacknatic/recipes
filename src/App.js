@@ -1,7 +1,6 @@
 import React from "react";
 
-import "./App.css";
-import "./Modal.css";
+import "./assets/css/App.css";
 import Recipes from "./Components/Recipes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";

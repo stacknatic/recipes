@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "../RecipeDetails.css";
+import "../assets/css/RecipeDetails.css";
 
 const RecipeDetails = () => {
   const params = useParams();
@@ -20,7 +20,7 @@ const RecipeDetails = () => {
         setRecipe(response.data);
       });
     setIsLoading(false);
-  }, []);
+  }, [params]);
 
   if (isLoading) {
     return <progress></progress>;
@@ -61,7 +61,7 @@ const RecipeDetails = () => {
               className="country-flag"
               src={`https://flagcdn.com/w40/${recipe.flag}.png`}
               width="40"
-              alt={recipe.country + " " + "flag"}
+              alt={recipe.country}
             />
           </picture>
 

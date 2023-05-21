@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { countriesList } from "../countriesList";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -14,6 +14,7 @@ const Ingredients = ({ addQuantity, addIngredient, index }) => {
           name="quantity"
           type="text"
           onChange={(e) => addQuantity(e, index)}
+          required
         />
       </div>
 
@@ -23,6 +24,7 @@ const Ingredients = ({ addQuantity, addIngredient, index }) => {
           name="ingredient"
           type="text"
           onChange={(e) => addIngredient(e, index)}
+          required
         />
       </div>
     </div>
@@ -30,7 +32,6 @@ const Ingredients = ({ addQuantity, addIngredient, index }) => {
 };
 
 const RecipeForm = (props) => {
-  const [loaded, setLoaded] = useState(false);
   const [ingredients, setIngredients] = useState([
     { quantity: "", ingredient: "" },
   ]);
@@ -55,31 +56,32 @@ const RecipeForm = (props) => {
     if (e.target.name === "country") {
       for (const [key, value] of Object.entries(countries)) {
         if (e.target.value === value) {
-          flag = key;          
-          setRecipeInfo(recipeInfo.flag = flag.toLowerCase());
+          flag = key;
+          setRecipeInfo((recipeInfo.flag = flag.toLowerCase()));
         }
-    }
+      }
     }
     setRecipeInfo({ ...recipeInfo, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
+      
+      !recipeInfo.country ? Swal.fire('Select country') :
+    
 
     axios
       .post("http://localhost:8000/recipes/", recipeInfo)
-      .then((response) => Swal.fire({
-        icon: 'success',
-        title: 'Recipe added successfully',
-        showConfirmButton: false,
-        timer: 2000
-      }))
-      .catch((error) => Swal.fire("Can't proceed"));
+      .then(() =>
+        Swal.fire({
+          icon: "success",
+          title: "Recipe added successfully",
+          showConfirmButton: false,
+          timer: 2000,
+        })
+      )
+      .catch((error) => Swal.fire("Can't proceed. Try again later."));
   };
-
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
 
   const ingredientHandler = (e, index) => {
     const updateIngredients = [...recipeInfo.ingredients];
@@ -95,20 +97,20 @@ const RecipeForm = (props) => {
     setIngredients([...ingredients, { quantity: "", ingredient: "" }]);
   };
 
-  if (loaded) {
     return (
       <form onSubmit={submitHandler}>
         <fieldset>
           <legend>Add new recipe</legend>
 
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" onChange={inputHandler} />
+          <input type="text" id="name" name="name" onChange={inputHandler} required/>
           <label htmlFor="author">Author</label>
           <input
             type="text"
             id="author"
             name="author"
             onChange={inputHandler}
+            required
           />
 
           <label htmlFor="country">Recipe is from</label>
@@ -118,9 +120,10 @@ const RecipeForm = (props) => {
             onChange={inputHandler}
           >
             {Object.values(countries).map((country) => (
-              <Option key={country} origin={country} />
+              <Option key={country} origin={country} 
+              
+              />
             ))}
-
           </select>
           <label htmlFor="description">Description</label>
           <textarea
@@ -129,10 +132,11 @@ const RecipeForm = (props) => {
             cols="30"
             rows="10"
             onChange={inputHandler}
+            required
           />
 
           <label htmlFor="image">Image</label>
-          <input type="text" id="image" name="image" onChange={inputHandler} />
+          <input type="text" id="image" name="image" onChange={inputHandler} required/>
 
           <label htmlFor="ingredients">Ingredients</label>
 
@@ -153,12 +157,12 @@ const RecipeForm = (props) => {
             cols="30"
             rows="10"
             onChange={inputHandler}
+            required
           />
           <input className="submit-button" type="submit" value="SUBMIT" />
         </fieldset>
       </form>
     );
-  }
-};
+  };
 
 export default RecipeForm;

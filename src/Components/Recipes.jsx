@@ -1,5 +1,5 @@
 import React from "react";
-import "../Recipes.css";
+import "../assets/css/Recipes.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "./Search";
@@ -7,18 +7,18 @@ import { Link } from "react-router-dom";
 // import { countriesList } from '../countriesList';
 
 const Recipes = () => {
-  const [recipes, setRecipes] = useState({
-    id: "",
-    name: "",
-    author: "",
-    country: "",
-    description: "",
-    image: "",
-    ingredients: [],
-    instructions: "",
-    loading: true,
-    data: [],
-  });
+  // const [recipes, setRecipes] = useState({
+  //   id: "",
+  //   name: "",
+  //   author: "",
+  //   country: "",
+  //   description: "",
+  //   image: "",
+  //   ingredients: [],
+  //   instructions: "",
+  //   loading: true,
+  //   data: [],
+  // });
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -28,7 +28,7 @@ const Recipes = () => {
 
     axios.get("http://localhost:8000/recipes/").then((response) => {
       setData(response.data);
-      setRecipes(response.data);
+      // setRecipes(response.data);
       setIsLoading(false);
     });
   }, []);
@@ -40,29 +40,33 @@ const Recipes = () => {
   const Card = ({ id, name, country, image, flag }) => {
     return (
       <div className="recipes">
-        {/* <img className='country-flag' src={`https://flagcdn.com/48x36/${flag}.png`}/> */}
+        <picture className="country-flag">
+          <source
+            className="country-flag"
+            type="image/webp"
+            srcSet={`https://flagcdn.com/w40/za.webp,
+      https://flagcdn.com/w80/${flag}.webp 2x`}
+          />
+          <source
+            className="country-flag"
+            type="image/png"
+            srcSet={`https://flagcdn.com/w40/za.png,
+      https://flagcdn.com/w80/${flag}.png 2x`}
+          />
+          <img
+            className="country-flag"
+            src={`https://flagcdn.com/w40/${flag}.png`}
+            width="40"
+            alt={country}
+          />
+        </picture>
 
-        
-  <picture className="country-flag">
-  <source className="country-flag"
-    type="image/webp"
-    srcSet={`https://flagcdn.com/w40/za.webp,
-      https://flagcdn.com/w80/${flag}.webp 2x`} />
-  <source className="country-flag"
-    type="image/png"
-    srcSet={`https://flagcdn.com/w40/za.png,
-      https://flagcdn.com/w80/${flag}.png 2x`} />
-  <img className="country-flag"
-    src={`https://flagcdn.com/w40/${flag}.png`}
-    width="40"
-  alt={country + ' ' + 'flag'} />
-</picture>
-        
-
-        <img className="recipe-photo" src={image} alt={name}/>
+        <img className="recipe-photo" src={image} alt={name} />
         <h2>{name}</h2>
-        
-        <Link to={id.toString()} className="see-more">view recipe</Link>
+
+        <Link to={id.toString()} className="see-more">
+          view recipe
+        </Link>
       </div>
     );
   };
