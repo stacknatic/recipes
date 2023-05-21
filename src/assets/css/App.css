@@ -10,7 +10,6 @@ a{
   text-decoration: none;
 }
 
-
 main{
   margin: 0 2rem;
 }
@@ -27,11 +26,6 @@ h2{
 }
 h3{
   margin: 1rem 0;
-}
-
-
-form fieldset, .preview{
-  margin: 0.3rem;
 }
 
 form fieldset{
@@ -108,61 +102,6 @@ legend{
 
 }
 
-.preview{
-  flex-basis: 60%;
-  width: 24rem;
-  height: auto;
-  padding: 1rem;
-
-  color: #1f1f1f;
-  font-size: 16px;
-  font-family: courier, monospace;
-  border: 1px solid #dedede;
-  font-family: courier, monospace;
-  background-color: #f5f5f5;
-}
-.preview li{
-  margin: 1rem;
-  list-style: none;
-  border-bottom: 1px dotted #ccc;
-  text-indent: 5px;
-  height: auto;
-  padding: 10px;
-}
-
-.preview li:hover {
-  background-color: #f0f0f0;
-  -webkit-transition: all 0.2s;
-  -moz-transition:    all 0.2s;
-  -ms-transition:     all 0.2s;
-  -o-transition:      all 0.2s;
-}
-
-.lines{
-  border-left: 1px solid #ffaa9f;
-  border-right: 1px solid #ffaa9f;
-  width: 2px;
-  float: left;
-  height: 495px;
-  margin-left: 40px;}
-
-.messagepreview{
-  display: flex;
-  text-indent: 0;
-  padding: 5px;
-  word-break: break-all;
-  margin: 0;
-  
-}
-
-.notes h2{
-  text-align: unset;
-}
-
-.notes ul{
-  padding: 1rem;
-}
-
 footer{
   position: fixed;
   left: 0;
@@ -173,6 +112,9 @@ footer{
   text-align: center;
   color: #fff;
   font-size: medium;
+}
+footer a{
+  color: #fff;
 }
 
 progress{
@@ -185,5 +127,8 @@ progress{
  form fieldset{
     width: fit-content;
   }
+  form fieldset input, select {
+    width: 100%;
+}
 }
 

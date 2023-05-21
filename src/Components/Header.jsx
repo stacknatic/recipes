@@ -6,7 +6,7 @@ import "../assets/css/Header.css";
 const Header = () => {
   return (
     <header>
-      <h1>TasteIT</h1>
+      <a href="/" className="site-title">TasteIT</a>
       <nav>
         <ul>
           <li>

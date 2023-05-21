@@ -12,8 +12,12 @@ header{
     z-index: 10;
 
 }
+.site-title{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
 nav ul .navlink{
-    /* display: inline-block; */
     color: #fff;
 }
 nav ul li{

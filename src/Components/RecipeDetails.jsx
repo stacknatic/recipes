@@ -14,7 +14,7 @@ const RecipeDetails = () => {
     setIsLoading(true);
 
     axios
-      .get(`http://localhost:8000/recipes/${params.recipedetails}`)
+      .get(`http://localhost:3015/posts/${params.recipedetails}`)
       .then((response) => {
         setIngredientEntries(response.data.ingredients);
         setRecipe(response.data);

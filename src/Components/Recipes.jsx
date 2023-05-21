@@ -4,21 +4,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "./Search";
 import { Link } from "react-router-dom";
-// import { countriesList } from '../countriesList';
 
 const Recipes = () => {
-  // const [recipes, setRecipes] = useState({
-  //   id: "",
-  //   name: "",
-  //   author: "",
-  //   country: "",
-  //   description: "",
-  //   image: "",
-  //   ingredients: [],
-  //   instructions: "",
-  //   loading: true,
-  //   data: [],
-  // });
+ 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -26,9 +14,8 @@ const Recipes = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get("http://localhost:8000/recipes/").then((response) => {
+    axios.get("http://localhost.com:3015/posts/").then((response) => {
       setData(response.data);
-      // setRecipes(response.data);
       setIsLoading(false);
     });
   }, []);

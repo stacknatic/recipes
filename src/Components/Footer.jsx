@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return(
         <footer>
-            <span>&copy; 2023 @stacknatic </span>
+            <a href="https://stacknatic.com/profile/akerele/">@stacknatic</a>
         </footer>
     )
 }

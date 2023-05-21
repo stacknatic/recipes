@@ -10,23 +10,20 @@ import RecipeDetails from "./Components/RecipeDetails";
 import RecipeForm from "./Components/RecipeForm";
 
 const App = () => {
-
-    return (
-      <div className="App">
-        <BrowserRouter>
+  return (
+    <div className="App">
+      <BrowserRouter>
         <Header />
         <Routes>
-
-        <Route path="" element={<HomePage />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/add-recipe" element={<RecipeForm />} />
-        <Route path="/recipes/:recipedetails" element={<RecipeDetails />} />
-        
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </div>
-    );
-  }
+          <Route path="" element={<HomePage />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/add-recipe" element={<RecipeForm />} />
+          <Route path="/recipes/:recipedetails" element={<RecipeDetails />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;

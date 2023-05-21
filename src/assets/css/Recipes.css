@@ -3,9 +3,6 @@
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   
-   
-   
 }
 .see-more{
     border: 1px solid green;
@@ -35,18 +32,12 @@
     background-color: #f5f5f5;
     color: #000;
     min-width: 200px;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center;
-    flex-direction: column; */
     text-align: center;
     
   
   }
 
   .country-flag{
-    /* width: 27px; */
-    /* height: 40px; */
     position: absolute;
     left: -0.65rem;
     top: -0.5rem;

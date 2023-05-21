@@ -71,7 +71,7 @@ const RecipeForm = (props) => {
     
 
     axios
-      .post("http://localhost:8000/recipes/", recipeInfo)
+      .post("http://localhost.com:3015/posts/", recipeInfo, {"Content-Type": "application/json"})
       .then(() =>
         Swal.fire({
           icon: "success",
