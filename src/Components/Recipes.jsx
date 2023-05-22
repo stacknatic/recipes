@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "./Search";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Recipes = () => {
  
@@ -14,10 +15,14 @@ const Recipes = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get("https://stacknatic.com/recipes/").then((response) => {
+    axios.get("https://stacknatic.com/recipes/")
+    .then((response) => {
       setData(response.data);
       setIsLoading(false);
-    });
+    })
+    .catch((e) => Swal.fire('If you are not using the live demo at recipes.stacknatic.com, modify the endpoint'))
+
+    ;
   }, []);
 
   if (isLoading) {

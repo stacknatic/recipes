@@ -14,7 +14,11 @@ The app uses React Js for the frontend and Django restframework for the back end
 
 - do 'npm install' to install dependencies.
 
-You can also edit the endpoint and use an endpoint of your choice.
+If you are not using the live demo at recipes.stacknatic.com, it is necessary to modify the endpoint. Do the following:
+
+- start json server with 'npm run server'
+
+- modify axios endpoint to the following 'http://localhost:3015/posts/
 
 ## Features
 

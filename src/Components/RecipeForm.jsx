@@ -140,10 +140,10 @@ const RecipeForm = (props) => {
 
           <label htmlFor="ingredients">Ingredients</label>
 
-          {ingredients.map((ingredient, i) => (
+          {ingredients.map((ingredient, index) => (
             <Ingredients
-              key={i}
-              index={i}
+              key={index}
+              index={index}
               addQuantity={ingredientHandler}
               addIngredient={ingredientHandler}
             />
