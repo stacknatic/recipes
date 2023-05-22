@@ -60,6 +60,7 @@ video {
     position: absolute;
     top: 0;
     left: 0;
+    background-image: url('https://images.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNvb2tpbmd8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=600&q=60');
   }
   
   .video-wrapper {

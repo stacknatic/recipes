@@ -18,8 +18,8 @@ const RecipeDetails = () => {
       .then((response) => {
         setIngredientEntries(response.data.ingredients);
         setRecipe(response.data);
+        setIsLoading(false);
       });
-    setIsLoading(false);
   }, [params]);
 
   if (isLoading) {
