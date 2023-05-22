@@ -6,12 +6,10 @@ const HomePage = () => {
   return (
     <div className="homepage-container">
       <div className="video-wrapper">
-        <video autoPlay muted loop id="myVideo">
+        <video autoPlay muted loop playsInline id="myVideo">
           <source src="https://www.shutterstock.com/shutterstock/videos/1045260718/preview/stock-footage-close-up-view-of-a-man-chef-cooking-italian-pizza-the-process-of-making-pizza-at-table-fresh.webm" />
           Your browser does not support HTML5 video.
         </video>
-
-        {/* </div> */}
 
         <NavLink className="browse-recipes" to="/recipes">
           Browse recipes
