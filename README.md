@@ -6,7 +6,7 @@ The app is a single page recipe web app that allows users to add and browse reci
 
 ## Tech Stack
 
-The app uses React Js for the frontend and Django restframework for the back end. 
+The app uses React Js for the frontend and Django REST framework for the back end. 
 
 ## Installation
 
