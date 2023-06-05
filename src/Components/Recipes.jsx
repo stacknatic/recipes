@@ -35,13 +35,13 @@ const Recipes = () => {
           <source
             className="country-flag"
             type="image/webp"
-            srcSet={`https://flagcdn.com/w40/za.webp,
+            srcSet={`https://flagcdn.com/w40/${flag}.webp,
       https://flagcdn.com/w80/${flag}.webp 2x`}
           />
           <source
             className="country-flag"
             type="image/png"
-            srcSet={`https://flagcdn.com/w40/za.png,
+            srcSet={`https://flagcdn.com/w40/${flag}.png,
       https://flagcdn.com/w80/${flag}.png 2x`}
           />
           <img
